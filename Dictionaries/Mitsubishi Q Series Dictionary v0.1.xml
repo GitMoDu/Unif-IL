@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<conversion_library>
+<title>Mitsubishi Q Series</title>
+<id>MISTUBISHIQ></id>
+<author>André Pereira</author>
+<year>2011</year>
+<version>0.1</version>
+<conversion_rules>
+
+<comment_markers>
+<start>;</start>
+<end></end>
+</comment_markers>
+
+<stack_manipulators>
+<new_stack>LD</new_stack>
+<new_stack>LDI</new_stack>
+</stack_manipulators>
+
+<variable_types>
+<variable_type>
+<description>Memory bit</description>
+<old>M*.*</old>
+<new>global binary</new>
+</variable_type>
+<variable_type>
+<description>digital input</description>
+<old>I*.*</old>
+<new>input digital</new>
+</variable_type>
+<variable_type>
+<description>digital output</description>
+<old>Q*.*</old>
+<new>output digital</new>
+</variable_type>
+</variable_types>
+<instructions>
+<instruction>
+<old_instruction>OR</old_instruction>
+<new_instruction>OR</new_instruction>
+<rules>declare argument</rules>
+<outcome>instruction argument</outcome>
+<conditionals></conditionals>
+</instruction>
+<instruction>
+<old_instruction>ORI</old_instruction>
+<new_instruction>ORN</new_instruction>
+<rules>declare argument</rules>
+<outcome>instruction argument</outcome>
+<conditionals></conditionals>
+</instruction>
+<instruction>
+<old_instruction>AND</old_instruction>
+<new_instruction>AND</new_instruction>
+<rules>declare argument</rules>
+<outcome>instruction argument</outcome>
+<conditionals></conditionals>
+</instruction>
+<instruction>
+<old_instruction>ANI</old_instruction>
+<new_instruction>ANDN</new_instruction>
+<rules>declare argument</rules>
+<outcome>instruction argument</outcome>
+<conditionals></conditionals>
+</instruction>
+<instruction>
+<old_instruction>LDI</old_instruction>
+<new_instruction>LDN</new_instruction>
+<rules>declare argument</rules>
+<outcome>instruction argument</outcome>
+<conditionals></conditionals>
+</instruction>
+<instruction>
+<old_instruction>LD</old_instruction>
+<new_instruction>LD</new_instruction>
+<rules>declare argument</rules>
+<outcome>instruction argument</outcome>
+<conditionals></conditionals>
+</instruction>
+<instruction>
+<old_instruction>OUT</old_instruction>
+<new_instruction>ST</new_instruction>
+<rules>declare argument</rules>
+<outcome>instruction argument</outcome>
+<conditionals></conditionals>
+</instruction>
+<instruction>
+<old_instruction>ORB</old_instruction>
+<new_instruction>OR(</new_instruction>
+<rules>add new_instruction argument at last new_stack</rules>
+<rules>delete line at last new_stack</rules>
+<outcome>")"</outcome>
+<conditionals></conditionals>
+</instruction>
+<instruction>
+<old_instruction>JMP</old_instruction>
+<new_instruction>JMP</new_instruction>
+<rules></rules>
+<outcome>instruction argument</outcome>
+<conditionals></conditionals>
+</instruction>
+<instruction>
+<old_instruction>CJ</old_instruction>
+<new_instruction>JMPC</new_instruction>
+<rules></rules>
+<outcome>instruction argument</outcome>
+<conditionals></conditionals>
+</instruction>
+<instruction>
+<old_instruction>P*</old_instruction>
+<new_instruction>:</new_instruction>
+<rules>delete space outcome</rules>
+<outcome>argument instruction</outcome>
+<conditionals></conditionals>
+</instruction>
+</instructions>
+
+<general_rules>
+<general_rule>
+<condition></condition>
+<outcome>";Mitsubishi Q Series translation dictionary"</outcome>
+</general_rule>
+</general_rules>
+
+</conversion_rules>
+</conversion_library>
+
+
