@@ -3,6 +3,8 @@ Unif-IL
 
 Unif-IL is a translation software to convert proprietary PLC code into IEC 61131-3 compliant IL code, using open XML dictionaries with a set of translation rules.
 
+![](https://raw.githubusercontent.com/GitMoDu/Unif-IL/master/Media/UnifILscreenshot.jpg)
+
 Motivation
 =======
 As the PLC automation industry moves forward to standard languages (as defined by the IEC 61131-3 standard), old programs from proprietary languages need to be developed again. Unless you use Unif-IL to automatically translate proprietary IL-style code into standard IL. If your preferred automation language is not included, just follow some simple rules and write a custom dictionary for a repeatable translation.
